@@ -11,10 +11,6 @@
 //
 // Hint: the name of the library is defined in Cargo.toml
 
-const FIRST: i32 = 1;
-const SECOND: i32 = 2;
-const THIRD: i32 = 3;
-
 // 2. Create a library module named `sound` and move the animal functions into it.
 //
 // - In your lib.rs file add the line `pub mod sound;`
@@ -25,17 +21,7 @@ const THIRD: i32 = 3;
 // - Change the function calls to access the functions through the `sound` module.
 //   For example: sound::dog()
 
-fn dog() {
-    println!("Dog goes WOOF!");
-}
-
-fn cat() {
-    println!("Cat goes MEOW!");
-}
-
-fn fox() {
-    println!("What does the fox say???");
-}
+use animal::prelude::*;
 
 fn main() {
     print!("Listening to animal {}: ", FIRST);
